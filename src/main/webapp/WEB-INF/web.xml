@@ -4,12 +4,12 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-<servlet>
-    <servlet-name>servletDemo1</servlet-name>
-    <servlet-class>com.liu.servlet.ServletDemo1</servlet-class>
-</servlet>
-    <servlet-mapping>
-        <servlet-name>servletDemo1</servlet-name>
-        <url-pattern>/servletDemo1</url-pattern>
-    </servlet-mapping>
+<!--<servlet>-->
+<!--    <servlet-name>servletDemo1</servlet-name>-->
+<!--    <servlet-class>com.liu.servlet.ServletDemo1</servlet-class>-->
+<!--</servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>servletDemo1</servlet-name>-->
+<!--        <url-pattern>/servletDemo1</url-pattern>-->
+<!--    </servlet-mapping>-->
 </web-app>
