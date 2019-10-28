@@ -16,8 +16,11 @@
 %>
 <form action="/learnWeb/addToCart" method="post">
     编号:<input type="text" name="pid" value="<%=goodsInfo.getPid()%>"><br>
-    名称:<span name="pname"><%=goodsInfo.getPname()%></span><br>
+    <input type="hidden" name="pname" value="<%=goodsInfo.getPname()%>">
+    名称:<span><%=goodsInfo.getPname()%></span><br>
+    <input type="hidden" name="pdesc" value="<%=goodsInfo.getPdesc()%>">
     简介:<span name="pdesc"><%=goodsInfo.getPdesc()%></span><br>
+    <input type="hidden" name="price" value="<%=goodsInfo.getPrice()%>">
     价格:<span name="price"><%=goodsInfo.getPrice()%></span><br>
     数量:<input type="text" name="num" value="<%=goodsInfo.getNum()%>"><br>
     <input type="submit" name="addCart" value="addToCart">

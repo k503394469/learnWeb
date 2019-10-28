@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -18,11 +19,16 @@ public class AddToCart extends HttpServlet {
         HttpSession session=request.getSession();
         Map<Integer,Goods> cartMap = (Map<Integer, Goods>) session.getAttribute("cart");
         String pid = request.getParameter("pid");
+        System.out.println(pid);
         String pname = request.getParameter("pname");
+        System.out.println(pname);
         String pdesc = request.getParameter("pdesc");
+        System.out.println(pdesc);
         String price = request.getParameter("price");
+        System.out.println(price);
         String num = request.getParameter("num");
         if (cartMap==null||cartMap.size()==0){
+            cartMap=new HashMap<>();
             Goods goodsTemp = new Goods();
             goodsTemp.setPid(Integer.valueOf(pid));
             goodsTemp.setPname(pname);
