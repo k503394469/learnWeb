@@ -1,6 +1,7 @@
 package com.liu.work;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Stu implements Serializable {
@@ -13,7 +14,15 @@ public class Stu implements Serializable {
 
     public Stu() {
     }
-
+    public String getBirStr(){
+        //格式化
+        if (date!=null){
+            SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return df.format(date);
+        }else {
+            return "";
+        }
+    }
     public Stu(String name, String sex, Integer age, Date date, String phone, String hobby) {
         this.name = name;
         this.sex = sex;
