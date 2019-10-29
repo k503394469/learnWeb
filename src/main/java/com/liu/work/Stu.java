@@ -14,15 +14,13 @@ public class Stu implements Serializable {
 
     public Stu() {
     }
-    public String getBirStr(){
-        //格式化
-        if (date!=null){
-            SimpleDateFormat df=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            return df.format(date);
-        }else {
-            return "";
-        }
+
+    public Stu(String name, Integer age, Date date) {
+        this.name = name;
+        this.age = age;
+        this.date = date;
     }
+
     public Stu(String name, String sex, Integer age, Date date, String phone, String hobby) {
         this.name = name;
         this.sex = sex;
@@ -30,6 +28,16 @@ public class Stu implements Serializable {
         this.date = date;
         this.phone = phone;
         this.hobby = hobby;
+    }
+
+    public String getBirStr() {
+        //格式化
+        if (date != null) {
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return df.format(date);
+        } else {
+            return "";
+        }
     }
 
     public String getName() {
